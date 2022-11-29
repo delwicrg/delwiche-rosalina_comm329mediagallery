@@ -26,7 +26,7 @@
 
     <!-- 
     <section class="slideshow">
-      <!--slider goes here
+      slider goes here
       <h2>slideshow here</h2>
       <div class="controls">
         <button>&#8249;</button>
@@ -107,23 +107,99 @@
 
 
     <section class="grid-cont">
-      <article class="card">
-        <!-- <img src="https://picsum.photos/480/320?grayscale&random=1" alt="alt-text reads . . ."> -->
-        <img class = "pic" src = "https://picsum.photos/id/431/1280/448"></img>
-        <h4>Heading for a bit</h4>
-        <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
-        <button onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
-      </article><!--end article.card-->
-      
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://unsplash.it/504/504/">
+						<div class="inner">
+							<p>Rendann</p>
+              <span>Lorem ipsum</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+              <button class = "more" onclick = "handleModal('blah', 'yeah', 'https://picsum.photos/id/225/1280/448')" id="myBtn">Open Modal</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+      <!--
+
+      <div class="card-2">
+        <div class="content">
+            <h2 class="title">Mountain View</h2>
+            <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p><button class="btn">View Trips</button>
+        </div>
+    </div> -->
+
+   
+        
       <!--
         add more article.cards inside this section
       -->
 
     </section>
+
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+
+        <span class="close">&times;</span>
+        <section class = "grid-cont-2">
+        <div><img id = modal_img src = ""/></div>
+        <div>
+            <h2 id = "modal-title"> TITLE</h2>
+            <p id = "modal-p">Some text in the Modal..</p>
+        </div>
+      </section>
+      </div>
+    
+    </div>
+
+
   </main>
   <footer>
-    <p>&copy;2022 Your Name</p>
+    <p>&copy;2022 Rosalina Delwiche</p>
   </footer>
   <script src="js/page.js"></script>
+  
+  <script>
+    function handleModal(title, text, im){
+            document.getElementById("modal-title").innerHTML = title;
+            document.getElementById("modal-p").innerHTML = text;
+
+          
+            document.getElementById("modal_img").src= im;
+
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+    }
+  }
+    </script>
+    
 </body>
 </html>
