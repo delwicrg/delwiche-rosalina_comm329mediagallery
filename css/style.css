@@ -135,19 +135,19 @@ main {
 
 @media screen and (min-width: 550px) { /*-- at slightly larger size, there are two equal columns --*/
   .grid-cont {grid-template-columns: repeat(2, 1fr);}
-  .grid-cont-2 {grid-template-columns: 1fr 1fr;}
+  .grid-cont-2 {grid-template-columns: 1fr;}
 }
 @media screen and (min-width: 768px) { /*-- still two equal columns --*/
   .grid-cont {grid-template-columns: repeat(2, 1fr);}
-  .grid-cont-2 {grid-template-columns: 1fr 1fr;}
+  .grid-cont-2 {grid-template-columns: 9fr 5fr;}
 }
 @media screen and (min-width: 1280px) { /*-- next size up, there are three equal columns --*/
   .grid-cont {grid-template-columns: repeat(3, 1fr);}
-  .grid-cont-2 {grid-template-columns: 1fr 1fr;}
+  .grid-cont-2 {grid-template-columns: 9fr 5fr;}
 }
 @media screen and (min-width: 1440px) { /*-- at the largest sizes, there are four equal columns --*/
   .grid-cont {grid-template-columns: repeat(4, 1fr);}
-  .grid-cont-2 {grid-template-columns: 1fr 1fr;}
+  .grid-cont-2 {grid-template-columns: 9fr 5fr;}
 
 
 }
@@ -770,6 +770,11 @@ h1{
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  border-radius: 10px;
+}
+
+.modal-content img{
+  border-radius: 5px;
 }
 
 
@@ -800,7 +805,7 @@ h1{
 
 .more:hover{
   background-color: rgb(93, 93, 100);
-  transition: background-color 0.15s ease-in 0.075s;
+  transition: background-color 0.005s ease-in 0.0005s;
 
 }
 
