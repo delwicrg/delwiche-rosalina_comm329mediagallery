@@ -141,7 +141,7 @@ main {
 }
 @media screen and (min-width: 768px) { /*-- still two equal columns --*/
   .grid-cont {grid-template-columns: repeat(2, 1fr);}
-  .grid-cont-2 {grid-template-columns: 9fr 5fr;}
+  .grid-cont-2 {grid-template-columns: 1fr;}
 }
 @media screen and (min-width: 1280px) { /*-- next size up, there are three equal columns --*/
   .grid-cont {grid-template-columns: repeat(3, 1fr);}
@@ -182,6 +182,7 @@ footer { /*-- just some footer styles, nothing weird --*/
   height: 6rem; /*-- fixed height  --*/
   justify-content: space-between; /*-- horizontal center --*/
   align-items: center; /*-- vertical center --*/
+  color: var(--lightbr);
 }
 footer p { /*-- targets the footer text --*/
   width: 100%; /*-- p elements are full width of the container --*/
@@ -254,7 +255,7 @@ footer p { /*-- targets the footer text --*/
 .caption-container {
   text-align: center;
   background-color: #6f160e;
-  padding: 2px 16px;
+  padding: 8px 16px;
   color: white;
 }
 
@@ -502,17 +503,19 @@ h1{
 
 /* Modal Content */
 .modal-content {
-  background-color: blanchedalmond;
+  background-color: rgba(255, 235, 205);
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
+  border: none;
   width: 80%;
   border-radius: 10px;
-}
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;}
 
 .modal-content img{
   border-radius: 5px;
+  box-shadow: rgba(144, 88, 4, 0.1) 0px 3px 6px, rgb(144, 88, 4, .15) 0px 3px 6px;
 }
+
 
 
 
@@ -588,3 +591,6 @@ h1{
 }
 
 
+.modal-title{
+    margin-bottom: 10px;
+}
