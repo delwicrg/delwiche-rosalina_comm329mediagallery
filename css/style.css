@@ -206,6 +206,8 @@ footer p { /*-- targets the footer text --*/
 /* Hide the images by default */
 .mySlides {
   display: none;
+  height: 500px;
+
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -593,4 +595,50 @@ h1{
 
 .modal-title{
     margin-bottom: 10px;
+}
+
+.slidePhoto {
+  height:500px;
+  object-fit: cover;
+
+        
+}
+
+.modal-title{
+  color: #6f160e;
+}
+
+.fade {
+  font-family: Arial;
+  font-size: 60px;
+  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: .75; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: .75; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: .75; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: .75; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: .75; }
+  100% { opacity: 1; }
 }

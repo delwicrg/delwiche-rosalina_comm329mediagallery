@@ -48,3 +48,33 @@ function navToggle() {
     trigram.classList = 'nav-link';
   }
 }
+
+
+/* https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_rr */
+carousel();
+
+function carousel() {
+  var i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}    
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+  
+  setTimeout(carousel, 10000); // Change image every 10 seconds
+
+
+}
